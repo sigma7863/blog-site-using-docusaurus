@@ -1,3 +1,13 @@
+sigma7863:
+  name: Sigma7863
+  title: Lazy Programmer
+  url: https://sigma7863.github.io
+  image_url: https://github.com/sigma7863.png
+  page: true
+  socials:
+    x: gbinsh
+    github: sigma7863
+
 yangshun:
   name: Yangshun Tay
   title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
