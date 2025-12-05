@@ -1,0 +1,9 @@
+sigma7863@Sigma7863 blog-site-using-docusaurus % bun start
+$ docusaurus start
+[INFO] Starting the development server...
+[SUCCESS] Docusaurus website is running at: http://localhost:3000/
+
+✔ Client
+  Compiled successfully in 21.05s
+
+client (webpack 5.103.0) compiled successfully
