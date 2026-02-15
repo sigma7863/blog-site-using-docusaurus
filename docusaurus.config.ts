@@ -75,19 +75,46 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Blog Site',
+      title: 'Sigma Room',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
       items: [
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'tutorialSidebar',
+        //   position: 'left',
+        //   label: 'Tutorial',
+        // },
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
+          label: '今週のテックニュース！',
+          to: 'docs/technews',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          label: 'Blog',
+          to: '/blog',
+        },
+        {
+          label: 'Diary',
+          to: '/diary',
+        },
+        {
+          label: 'Book',
+          to: '/book',
+        },
+        {
+          label: 'Projects',
+          to: '/projects'
+        },
+        {
+          label: 'メモ',
+          to: '/memo'
+        },
+        {
+          type: 'search',
+          position: 'right'
+        },
         {
           href: 'https://github.com/sigma7863/blog-site-using-docusaurus',
           label: 'GitHub',
@@ -99,38 +126,66 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Contents',
           items: [
+            // {
+            //   label: 'Tutorial',
+            //   to: '/docs/intro',
+            // },
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: '今週のテックニュース！',
+              to: '/technews',
             },
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
+            {
+              label: 'Diary',
+              to: '/diary',
+            },
+            {
+              label: 'Book',
+              to: '/book',
+            },
+            {
+              label: 'Projects',
+              to: '/projects'
+            },
+            {
+              label: 'メモ',
+              to: '/memo'
+            }
           ],
         },
         {
-          title: 'Community',
+          title: 'Link',
           items: [
+            // {
+            //   label: 'Stack Overflow',
+            //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+            // },
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'X',
+              href: 'https://x.com/gbinfh',
+            },
+            {
+              label: 'Github',
+              href: 'https://github.com/sigma7863'
             },
             {
               label: 'Discord',
               href: 'https://discord.com/users/1078241292422762579',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/gbinfh',
             },
           ],
         },
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
+            // {
+            //   label: 'Blog',
+            //   to: '/blog',
+            // },
             {
               label: 'GitHub',
               href: 'https://github.com/sigma7863',
@@ -143,6 +198,41 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    algolia: {
+      // The application ID provided by Algolia
+      appId: 'HNCP2HFZ8P',
+
+      // Public API key: it is safe to commit it
+      apiKey: 'b0c0fc3e41a2f6d76e070fc1dc79f999',
+
+      indexName: 'Test',
+
+      // Optional: see doc section below
+      contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      externalUrlRegex: 'external\\.com|domain\\.com',
+
+      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      replaceSearchResultPathname: {
+        from: '/docs/', // or as RegExp: /\/docs\//
+        to: '/',
+      },
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: false,
+
+      // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+      insights: false,
+
+      // Optional: whether you want to use the new Ask AI feature (undefined by default)
+      // askAi: 'YOUR_ALGOLIA_ASK_AI_ASSISTANT_ID',
+
+      //... other Algolia params
     },
   } satisfies Preset.ThemeConfig,
 };
