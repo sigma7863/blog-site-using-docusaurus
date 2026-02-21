@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -22,7 +22,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
+  organizationName: 'sigma7863',
   projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -31,9 +31,20 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ja',
+    locales: ['ja','en'],
   },
+
+  plugins: [
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "blog-diary",
+        routeBasePath: "diary",
+        path: "diary",
+      },
+    ],
+  ],
 
   presets: [
     [
@@ -41,18 +52,17 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
+          routeBasePath: 'blog',
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -81,15 +91,9 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'tutorialSidebar',
-        //   position: 'left',
-        //   label: 'Tutorial',
-        // },
         {
           label: '今週のテックニュース！',
-          to: 'docs/technews',
+          to: 'docs/technews/2026',
         },
         {
           label: 'Blog',
@@ -101,15 +105,11 @@ const config: Config = {
         },
         {
           label: 'Book',
-          to: '/book',
+          to: 'docs/books',
         },
         {
           label: 'Projects',
           to: '/projects'
-        },
-        {
-          label: 'メモ',
-          to: '/memo'
         },
         {
           type: 'search',
@@ -128,13 +128,9 @@ const config: Config = {
         {
           title: 'Contents',
           items: [
-            // {
-            //   label: 'Tutorial',
-            //   to: '/docs/intro',
-            // },
             {
               label: '今週のテックニュース！',
-              to: '/technews',
+              to: 'docs/technews/2026',
             },
             {
               label: 'Blog',
@@ -146,7 +142,7 @@ const config: Config = {
             },
             {
               label: 'Book',
-              to: '/book',
+              to: '/books',
             },
             {
               label: 'Projects',
@@ -161,10 +157,6 @@ const config: Config = {
         {
           title: 'Link',
           items: [
-            // {
-            //   label: 'Stack Overflow',
-            //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            // },
             {
               label: 'X',
               href: 'https://x.com/gbinfh',
@@ -182,10 +174,6 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            // {
-            //   label: 'Blog',
-            //   to: '/blog',
-            // },
             {
               label: 'GitHub',
               href: 'https://github.com/sigma7863',
@@ -193,7 +181,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Sigma7863(My Project), Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} sigma7863, Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
