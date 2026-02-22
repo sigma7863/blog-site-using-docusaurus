@@ -82,7 +82,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/my-icon.png',
     colorMode: {
-      respectPrefersColorScheme: true,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'Sigma Room',
@@ -96,6 +96,10 @@ const config: Config = {
           to: 'docs/technews/2026',
         },
         {
+          label: 'Books',
+          to: 'docs/books',
+        },
+        {
           label: 'Blog',
           to: '/blog',
         },
@@ -103,20 +107,13 @@ const config: Config = {
           label: 'Diary',
           to: '/diary',
         },
-        {
-          label: 'Book',
-          to: 'docs/books',
-        },
-        {
-          label: 'Projects',
-          to: '/projects'
-        },
-        {
-          type: 'search',
-          position: 'right'
-        },
+        // {
+        //   label: 'Projects',
+        //   to: '/projects'
+        // },
         {
           href: 'https://github.com/sigma7863/blog-site-using-docusaurus',
+          className: "header-github-link",
           label: 'GitHub',
           position: 'right',
         },
@@ -133,6 +130,10 @@ const config: Config = {
               to: 'docs/technews/2026',
             },
             {
+              label: 'Books',
+              to: 'docs/books',
+            },
+            {
               label: 'Blog',
               to: '/blog',
             },
@@ -140,18 +141,14 @@ const config: Config = {
               label: 'Diary',
               to: '/diary',
             },
-            {
-              label: 'Book',
-              to: '/books',
-            },
-            {
-              label: 'Projects',
-              to: '/projects'
-            },
-            {
-              label: 'メモ',
-              to: '/memo'
-            }
+            // {
+            //   label: 'Projects',
+            //   to: '/projects'
+            // },
+            // {
+            //   label: 'メモ',
+            //   to: '/memo'
+            // },
           ],
         },
         {
@@ -159,7 +156,7 @@ const config: Config = {
           items: [
             {
               label: 'X',
-              href: 'https://x.com/gbinfh',
+              href: 'https://x.com/qktlg9',
             },
             {
               label: 'Github',
