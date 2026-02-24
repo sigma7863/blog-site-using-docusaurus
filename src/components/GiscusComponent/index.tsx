@@ -18,6 +18,7 @@ export default function GiscusComponent() {
       input-position="top"
       theme={ colorMode === 'dark' ? 'dark' : 'light' }
       lang="ja"
+      loading="lazy"
     />
   );
 }
