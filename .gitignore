@@ -11,6 +11,9 @@
 # Obsidian
 .obsidian
 
+# OR only to exclude workspace cache
+.obsidian/workspace.json
+
 # Misc
 .DS_Store
 .env.local
