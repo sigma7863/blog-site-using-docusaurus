@@ -2,6 +2,9 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
@@ -35,6 +38,12 @@ const config: Config = {
     locales: ['ja','en'],
   },
 
+  themes: ["@docusaurus/theme-mermaid"],
+
+  markdown: {
+    mermaid: true,
+  },
+
   plugins: [
     [
       "@docusaurus/plugin-content-blog",
@@ -53,8 +62,9 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           routeBasePath: 'blog',
@@ -64,8 +74,9 @@ const config: Config = {
             xslt: true,
           },
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -79,7 +90,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/my-icon.png',
     colorMode: {
       respectPrefersColorScheme: false,
@@ -185,33 +195,17 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
     algolia: {
-      // The application ID provided by Algolia
       appId: 'HNCP2HFZ8P',
-
-      // Public API key: it is safe to commit it
       apiKey: 'b0c0fc3e41a2f6d76e070fc1dc79f999',
-
       indexName: 'Test',
-
-      // Optional: see doc section below
       contextualSearch: true,
-
-      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
       externalUrlRegex: 'external\\.com|domain\\.com',
-
-      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
       replaceSearchResultPathname: {
         from: '/docs/', // or as RegExp: /\/docs\//
         to: '/',
       },
-
-      // Optional: Algolia search parameters
       searchParameters: {},
-
-      // Optional: path for search page that enabled by default (`false` to disable it)
       searchPagePath: false,
-
-      // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
       insights: false,
 
       // Optional: whether you want to use the new Ask AI feature (undefined by default)
