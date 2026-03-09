@@ -63,7 +63,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          remarkPlugins: [remarkMath],
+          remarkPlugins: [[remarkMath, { strict: false }]],
           rehypePlugins: [rehypeKatex],
         },
         blog: {
@@ -75,7 +75,7 @@ const config: Config = {
           },
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          remarkPlugins: [remarkMath],
+          remarkPlugins: [[remarkMath, { strict: false }]],
           rehypePlugins: [rehypeKatex],
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
