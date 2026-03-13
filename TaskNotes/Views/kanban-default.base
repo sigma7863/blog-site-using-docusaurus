@@ -60,6 +60,10 @@ views:
       - recurrence
       - complete_instances
       - file.tasks
+    sort:
+      - property: file.mtime
+        direction: ASC
     options:
       columnWidth: 280
       hideEmptyColumns: false
+    columnOrder: '{"note.status":["Today","プロジェクト","Blogネタ","open","in-progress","done","none"]}'
