@@ -66,4 +66,4 @@ views:
     options:
       columnWidth: 280
       hideEmptyColumns: false
-    columnOrder: '{"note.status":["Today","プロジェクト","Blogネタ","open","in-progress","done","none"]}'
+    columnOrder: '{"note.status":["Today","プロジェクト","Blogネタ","Diary","Sometimes","ToDo-All","プログラミングアイデア","候補-プログラミング","候補","open","in-progress","done","none"]}'
