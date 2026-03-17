@@ -61,7 +61,7 @@ views:
       - complete_instances
       - file.tasks
     sort:
-      - property: file.mtime
+      - property: file.ctime
         direction: DESC
     options:
       columnWidth: 280
