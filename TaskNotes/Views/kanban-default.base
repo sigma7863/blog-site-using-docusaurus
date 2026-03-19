@@ -62,7 +62,7 @@ views:
       - file.tasks
     sort:
       - property: file.ctime
-        direction: DESC
+        direction: ASC
     options:
       columnWidth: 280
       hideEmptyColumns: false
